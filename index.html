@@ -1,1 +1,48 @@
-Hello World
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Melbourne</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.grey-blue.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row" id="cafe-header">
+          <span class="mdl-layout-title">Melbourne Cafes</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div id="map_wrapper">
+          <div id="map"></div>
+          <div id="over_map">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="year">
+              2002
+            </button>
+          </div>
+        </div>
+        <div id="player">
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent" id="play-button">
+              <i class="material-icons" id="button-icon">play_arrow</i>
+          </button>
+          <div class="mdl-color-text--grey-600" id="play-year">2002</div>
+          <div id="play-slider">
+            <div id="play-slider-margin">
+              <input class="mdl-slider mdl-js-slider" type="range" id="year-slider" min="0" max="6" value="0" step="1">
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+    <script src="map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  </body>
+</html>

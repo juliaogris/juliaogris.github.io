@@ -1,0 +1,35 @@
+html, body {
+  	font-family: 'Roboto', 'Helvetica', sans-serif;
+	height: 100%;
+}
+#cafe-header {
+	padding-left: 20px;
+}
+
+#map {
+	height: 500px;
+}
+
+#play-button {
+    float: left;
+	height: 36px;
+}
+#play-slider {
+    overflow: hidden;
+	height: 36px;
+}
+#play-slider-margin {
+	margin-top: 10px;
+}
+#play-year {
+	padding-top: 8px;
+	padding-right: 8px;
+	float:right;
+	height: 26px;
+}
+#wrapper {
+	position: relative;
+}
+#over_map {
+	position: absolute; top: 10px; left: 10px; z-index: 99;
+}
