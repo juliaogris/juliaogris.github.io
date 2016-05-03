@@ -108,7 +108,7 @@ function initMap() {
 }
 
 function updateSize() {
-  var height = window.innerHeight - 92;
+  var height = window.innerHeight - 100;
   document.getElementById("map").style.height = "" + height + "px";
 }
 
