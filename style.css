@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: url(../images/guava.jpg) no-repeat center center fixed;
+  background: rgba(109, 132, 58, 1.0); url(../images/guava.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -19,7 +19,7 @@ a:active, a:hover {
   margin-top: 0;
   font-family: "PT Serif", serif;
   font-size: 6vmin;
- }
+}
 
 .container div {
   float: left;
