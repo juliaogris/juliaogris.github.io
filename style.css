@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background: url(../images/guava.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  background-color: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 25vmin;
+  max-width: 50vmax;
+  color: white;
+  margin-top: 0;
+  font-family: "PT Serif", serif;
+  font-size: 6vmin;
+ }
+
+.container div {
+  float: left;
+}
+
+.container p {
+  margin-bottom: 8vmin;
+}
+
+.btn {
+  margin-left: 1.5vmin;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
+  padding-bottom: 1vmin;
+  padding-top: .07vmin;
+  background-color: rgba(208, 27, 70, 0.6);
+  color: white;
+  border-radius: 2vmin;
+  box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 0.67);
+  margin-bottom: 0;
+}
