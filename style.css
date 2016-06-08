@@ -1,7 +1,12 @@
+html {
+  background: #333333 url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%
+}
+
 body {
   margin: 0;
-  background: rgba(109, 132, 58, 1.0) url(images/guava.jpg) no-repeat center center fixed;
-  background-size: cover;
 }
 
 a {
@@ -29,7 +34,7 @@ a:active, a:hover {
   margin-bottom: 8vmin;
 }
 
-.btn {
+.red {
   margin-left: 1.5vmin;
   padding-left: 3vmin;
   padding-right: 3vmin;
@@ -37,7 +42,7 @@ a:active, a:hover {
   padding-top: .07vmin;
   background-color: rgba(208, 27, 70, 0.6);
   color: white;
-  border-radius: 2vmin;
+  border-radius: 1.5vmin;
   box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 0.67);
   margin-bottom: 0;
 }
