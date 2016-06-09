@@ -1,7 +1,7 @@
 /* exported WebFontConfig */
 'use strict';
-// todo: google analytics, smooth scroll to top, font awesome, button pressed effect.
-// slide-share, photos
+// todo: google analytics, smooth scroll to top, font awesome svg, button pressed effect.
+// slide-share, photos, different margin for desktop, different link style for desktop.
 
 // var WebFontConfig = {
 //   google: { families: [ 'PT+Serif::latin' ] }

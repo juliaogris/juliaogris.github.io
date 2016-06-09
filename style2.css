@@ -39,7 +39,6 @@ h1 {
   max-width: 550px;
   margin: 0 auto;
   padding: 20px 20px;
-  box-sizing: border-box;
 }
 
 .panel {
@@ -52,7 +51,6 @@ h1 {
   cursor: pointer;
   font-family:   "PT Serif", serif;
   font-size: 5vmin;
-  color: white;
 }
 
 .panel p {
