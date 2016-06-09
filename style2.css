@@ -17,12 +17,64 @@ a {
   border: 2px solid white;
   padding: 2.8vmin;
   padding-left: 3.8vmin;
-  padding-right: 1.8vmin;
-  font-size: 4vmin;
+  padding-right: 3.8vmin;
+  font-size: 5vmin;
   font-family: Arial, sans-serif;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  a {
+    color: #2196F3;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-left: .5rem;
+    margin-right: 0;
+    font-family:   "PT Serif", serif;
+    font-weight: 800;
+
+  }
+  a:hover {
+    color: #90CAF9;
+  }
 }
 a:active, a:hover {
   outline: 0;
+}
+
+h1 {
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.panel {
+  padding: 20px 15px;
+  background-color: rgba(208, 27, 70, 0.85);
+  color: white;
+  border-radius: 2vmin;
+  box-shadow: 0.2vmin 0.7vmin 0.1vmin 0 rgba(50, 0, 6, 0.67);
+  margin-bottom: 0;
+  cursor: pointer;
+  font-family:   "PT Serif", serif;
+  font-size: 6vmin;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .panel {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+  }
 }
 
 span.btn {
@@ -31,32 +83,24 @@ span.btn {
   display: block;
 }
 
-h1 {
-}
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 20px 20px;
+/* Larger than tablet */
+@media (min-width: 750px) {
+  span.btn {
+    margin: 0;
+    display: inline-block;
+  }
 }
 
-.panel {
-  padding: 20px 15px;
-  background-color: rgba(208, 27, 70, 0.6);
-  color: white;
-  border-radius: 2vmin;
-  box-shadow: 0.2vmin 0.7vmin 0.1vmin 0 rgba(50, 0, 6, 0.67);
-  margin-bottom: 0;
-  cursor: pointer;
-  font-family:   "PT Serif", serif;
-  font-size: 5vmin;
-}
 
 .panel p {
   margin-bottom: 12vmin;
 }
-
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .panel p {
+    margin-bottom: 2.5rem;
+  }
+}
 .contact{
   margin-top: 15vmin;
 }
