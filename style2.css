@@ -57,9 +57,9 @@ h1 {
   box-sizing: border-box;
 }
 
-.panel {
+.red {
   padding: 20px 15px;
-  background-color: rgba(208, 27, 70, 0.85);
+  background-color: rgba(208, 27, 70, 0.75);
   color: white;
   border-radius: 2vmin;
   box-shadow: 0.2vmin 0.7vmin 0.1vmin 0 rgba(50, 0, 6, 0.67);
@@ -71,7 +71,7 @@ h1 {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  .panel {
+  .red {
     padding: 20px 50px;
     font-size: 1.5rem;
   }
@@ -91,13 +91,12 @@ span.btn {
   }
 }
 
-
-.panel p {
+.red p {
   margin-bottom: 12vmin;
 }
 /* Larger than tablet */
 @media (min-width: 750px) {
-  .panel p {
+  .red p {
     margin-bottom: 2.5rem;
   }
 }
