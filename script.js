@@ -16,12 +16,16 @@
 // })();
 
 var red = document.querySelector('.red');
-var container = document.querySelector('.container');
-var panel = document.querySelector('.panel');
-var coverIntro = document.querySelector('.cover-intro');
-var coverFullstop = document.querySelector('.cover-fullstop');
-var coverMsg = document.querySelector('.cover-msg');
 var julia = document.querySelector('.julia');
+var hi = document.querySelector('.hi');
+var pith = document.querySelector('.pith');
+var fullstop = document.querySelector('.fullstop');
+var heading = document.querySelector('.heading');
+// var container = document.querySelector('.container');
+// var panel = document.querySelector('.panel');
+// var coverIntro = document.querySelector('.cover-intro');
+// var coverFullstop = document.querySelector('.cover-fullstop');
+// var coverMsg = document.querySelector('.cover-msg');
 //var details = document.querySelector('.details');
 
 // From Tween.js (MIT license)
@@ -39,7 +43,8 @@ function timingFunctionExpand(t) {
 //   return 0.5 * ((t -= 2) * t * t * t * t + 2);
 // }
 
-red.addEventListener('click', function() {
+
+function expand(){
 	console.log("RED click.");
 
   // Only expand if the item is collapsed.
@@ -48,19 +53,24 @@ red.addEventListener('click', function() {
 
   var options = {
     timing: timingFunctionExpand,
-    duration: 30000
+    duration: 4000
   };
 
   // FLIP = first, last, invert, play - for best frame rate. details under
   // https://aerotwist.com/blog/flip-your-animations/
   let flipGroup = FLIP.group([
-    Object.assign({}, options, { element: container }),
-    Object.assign({}, options, { element: panel }),
-    Object.assign({}, options, { element: julia }),
-    Object.assign({}, options, { element: coverIntro, duration: 10, transform: false }),
-    Object.assign({}, options, { element: coverMsg, duration: 10, transform: false }),
-    Object.assign({}, options, { element: coverFullstop, duration: 10, transform: false }),
     Object.assign({}, options, { element: red }),
+    Object.assign({}, options, { element: julia }),
+    //Object.assign({}, options, { element: heading }),
+    //Object.assign({}, options, { element: hi }),
+    Object.assign({}, options, { element: pith, duration: 1000, transform: false }),
+    Object.assign({}, options, { element: hi, duration: 1000, transform: false }),
+    Object.assign({}, options, { element: fullstop, duration: 1000, transform: false }),
+    // Object.assign({}, options, { element: container }),
+    // Object.assign({}, options, { element: panel }),
+    // Object.assign({}, options, { element: coverIntro, duration: 10, transform: false }),
+    // Object.assign({}, options, { element: coverMsg, duration: 10, transform: false }),
+    // Object.assign({}, options, { element: coverFullstop, duration: 10, transform: false }),
     //Object.assign({}, options, { element: details }),
   ]);
 
@@ -68,4 +78,9 @@ red.addEventListener('click', function() {
   flipGroup.last('last');
   flipGroup.invert();
   flipGroup.play();
-});
+
+  // remove expand listener from red & julia
+}
+
+red.addEventListener('click', expand);
+julia.addEventListener('click', expand);

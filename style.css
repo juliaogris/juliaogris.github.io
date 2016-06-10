@@ -7,115 +7,112 @@ html {
 
 body {
   margin: 0;
-}
-
-a {
-  background-color: transparent;
-}
-a:active, a:hover {
-  outline: 0;
-}
-
-.container {
-  position: relative;
-  margin: 0;
-  padding: 22vmin;
-  padding-bottom: 0;
-  max-width: 52vmax;
-  color: white;
-  margin-top: 0;
   font-family: "PT Serif", serif;
+  color: white;
   font-size: 6vmin;
-  border: 0px solid yellow;
+  border: 1px solid orange;
 }
 
-.container.last {
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 20px 20px;
-  box-sizing: border-box;
+.container{
+  margin: 20px;
+  border: 1px solid blue;
 }
 
-.panel {
-  position: relative;
-  width: 16vmin;
-  height: 8vmin;
-  display: inline-block;
-  color: transparent;
-  border: 0px solid blue;
-}
-
-.panel.last {
+.hi {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
+  left: 22vmin;
+  top: 22vmin;
+}
+.hi.last {
+  top: 101vh;
 }
 
-.cover-intro.last,
-.cover-fullstop.last,
-.cover-msg.last {
-  opacity: 0;
-}
-
-.cover-intro,
-.cover-fullstop{
-  position: relative;
-  display: inline-block;
-  opacity: 1;
-}
-
-.cover-msg p {
-  margin-bottom: 7vmin;
-}
 
 .julia {
   position: absolute;
-  top: 0;
-  left: 2vmin;
-  opacity: 1;
-  color: white;
+  left: 43vmin;
+  top: 22vmin;
+  border: 1px solid yellow;
+  z-index: 2;
+
 }
 .julia.last {
-  top: 4rem;
-  left: 2rem;
+  position: relative;
+  max-width: 12vmin;
+  top: 0;
+  left: 10px;
+  top: 50px;
 }
 
-.red {
+/* For devices larger than 800px */
+@media (min-width: 800px) {
+  .julia {
+    width: 400px;
+    border: 4px solid blue;
+  }
+ .julia.last {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+    top: 40px;
+    left: -120px;
+}
+
+}
+.red
+ {
   position: absolute;
-  opacity: 0.6;
-  top: 0;
-  left: 0;
+  width: 15vmin;
   height: 8vmin;
-  width: 16vmin;
+  top: 22vmin;
+  left: 41.5vmin;
+  opacity: 0.6;
   background-color: rgba(208, 27, 70, 1);
   border-radius: 1.5vmin;
-  box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 1.0);
-  transform:  translateZ(0);
+  box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 1);
+  z-index: 1;
+}
+.red.last {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  left: 0;
+  top: -28px;
+  margin: 0 auto;
+  height: 200vh;
+  opacity: 0.8;
 }
 
-.red.last {
+.fullstop {
   position: absolute;
-  opacity: .85;
-  top: 1.5rem;
-  left:0;
-  width: inherit;
-  height: 200vh;
+  left: 57vmin;
+  top: 22vmin;
+}
+.fullstop.last {
+  top: 101vh;
+}
 
+.pith {
+  position: absolute;
+  top: 30vmin;
+  left: 22vmin;
+  margin-right: 22vmin;
+  max-width: 80vmin;
+}
+.pith.last {
+  opacity: 0;
+}
+
+.hi.last,
+.fullstop.last,
+.pith.last {
+  opacity: 0;
+}
+
+.pith p {
+  margin-bottom: 7vmin;
 }
 
 .details {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  color: white;
-  font-size: 6vmin;
-}
-
-.details.last{
-  opacity: 1;
-  width: 100%;
-  height: 100%;
+  display: none;
 }
