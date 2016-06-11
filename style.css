@@ -36,7 +36,6 @@ body {
   top: 22vmin;
   border: 0px solid yellow;
   z-index: 2;
-  font-weight: 800;
 }
 .julia.last {
   position: relative;
@@ -125,7 +124,7 @@ body {
   font-size: 3.5vmin;
   border: 0px solid green;
   overflow: hidden;
-  z-index: 3;
+  z-index: 5;
 }
 
 .details.last {
@@ -173,8 +172,6 @@ a {
     margin-right: 0;
     font-size: 3.5vmin;
     font-family:   "PT Serif", serif;
-    font-weight: 800;
-
   }
   a:hover {
     color: #90CAF9;

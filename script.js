@@ -28,7 +28,7 @@ var closeBtn = document.querySelector('.close');
 
 // From Tween.js (MIT license)
 // @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
-function timingFunctionExpand(t) {
+function timingExpand(t) {
   return --t * t * t * t * t + 1;
 }
 
@@ -49,22 +49,17 @@ function expand(){
   if (red.classList.contains('last'))
     return;
 
-  var options = {
-    timing: timingFunctionExpand,
-    duration: 800
-  };
-
   // FLIP = first, last, invert, play - for best frame rate. details under
   // https://aerotwist.com/blog/flip-your-animations/
-  let flipGroup = FLIP.group([
-    Object.assign({}, options, { element: red }),
-    Object.assign({}, options, { element: julia }),
-    Object.assign({}, options, { element: ogris, transform: false }),
-    Object.assign({}, options, { element: pith, duration: 200, transform: false }),
-    Object.assign({}, options, { element: hi, duration: 200, transform: false }),
-    Object.assign({}, options, { element: fullstop, duration: 200, transform: false }),
-    Object.assign({}, options, { element: details, duration: 900, delay: 200}),
-    Object.assign({}, options, { element: closeBtn, transform: false, delay:400}),
+  var flipGroup = FLIP.group([
+    { timing: timingExpand, duration: 500, element: red },
+    { timing: timingExpand, duration: 500, element: julia },
+    { timing: timingExpand, duration: 500, element: ogris, transform: false },
+    { timing: timingExpand, duration: 150, element: pith,  transform: false },
+    { timing: timingExpand, duration: 150, element: hi, transform: false },
+    { timing: timingExpand, duration: 200, element: fullstop, transform: false },
+    { timing: timingExpand, duration: 400, element: details, delay: 250},
+    { timing: timingExpand, duration: 500, element: closeBtn, transform: false, delay:150},
   ]);
 
   flipGroup.first();
