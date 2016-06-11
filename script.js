@@ -2,6 +2,7 @@
 'use strict';
 // todo: google analytics, smooth scroll to top, font awesome svg, button pressed effect.
 // slide-share, photos, different margin for desktop, different link style for desktop.
+// pointer, close button
 
 // var WebFontConfig = {
 //   google: { families: [ 'PT+Serif::latin' ] }
@@ -21,12 +22,9 @@ var hi = document.querySelector('.hi');
 var pith = document.querySelector('.pith');
 var fullstop = document.querySelector('.fullstop');
 var ogris = document.querySelector('.ogris');
-// var container = document.querySelector('.container');
-// var panel = document.querySelector('.panel');
-// var coverIntro = document.querySelector('.cover-intro');
-// var coverFullstop = document.querySelector('.cover-fullstop');
-// var coverMsg = document.querySelector('.cover-msg');
-//var details = document.querySelector('.details');
+var details = document.querySelector('.details');
+var container = document.querySelector('.container');
+var closeBtn = document.querySelector('.close');
 
 // From Tween.js (MIT license)
 // @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
@@ -53,7 +51,7 @@ function expand(){
 
   var options = {
     timing: timingFunctionExpand,
-    duration: 4000
+    duration: 800
   };
 
   // FLIP = first, last, invert, play - for best frame rate. details under
@@ -62,24 +60,18 @@ function expand(){
     Object.assign({}, options, { element: red }),
     Object.assign({}, options, { element: julia }),
     Object.assign({}, options, { element: ogris, transform: false }),
-    //Object.assign({}, options, { element: heading }),
-    //Object.assign({}, options, { element: hi }),
-    Object.assign({}, options, { element: pith, duration: 1000, transform: false }),
-    Object.assign({}, options, { element: hi, duration: 1000, transform: false }),
-    Object.assign({}, options, { element: fullstop, duration: 1000, transform: false }),
-    // Object.assign({}, options, { element: container }),
-    // Object.assign({}, options, { element: panel }),
-    // Object.assign({}, options, { element: coverIntro, duration: 10, transform: false }),
-    // Object.assign({}, options, { element: coverMsg, duration: 10, transform: false }),
-    // Object.assign({}, options, { element: coverFullstop, duration: 10, transform: false }),
-    //Object.assign({}, options, { element: details }),
+    Object.assign({}, options, { element: pith, duration: 200, transform: false }),
+    Object.assign({}, options, { element: hi, duration: 200, transform: false }),
+    Object.assign({}, options, { element: fullstop, duration: 200, transform: false }),
+    Object.assign({}, options, { element: details, duration: 900, delay: 200}),
+    Object.assign({}, options, { element: closeBtn, transform: false, delay:400}),
   ]);
 
   flipGroup.first();
+  container.classList.add('last');
   flipGroup.last('last');
   flipGroup.invert();
   flipGroup.play();
-
   // remove expand listener from red & julia
 }
 
