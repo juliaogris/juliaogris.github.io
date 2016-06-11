@@ -20,7 +20,7 @@ var julia = document.querySelector('.julia');
 var hi = document.querySelector('.hi');
 var pith = document.querySelector('.pith');
 var fullstop = document.querySelector('.fullstop');
-var heading = document.querySelector('.heading');
+var ogris = document.querySelector('.ogris');
 // var container = document.querySelector('.container');
 // var panel = document.querySelector('.panel');
 // var coverIntro = document.querySelector('.cover-intro');
@@ -61,6 +61,7 @@ function expand(){
   let flipGroup = FLIP.group([
     Object.assign({}, options, { element: red }),
     Object.assign({}, options, { element: julia }),
+    Object.assign({}, options, { element: ogris, transform: false }),
     //Object.assign({}, options, { element: heading }),
     //Object.assign({}, options, { element: hi }),
     Object.assign({}, options, { element: pith, duration: 1000, transform: false }),

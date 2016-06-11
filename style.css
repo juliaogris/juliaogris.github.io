@@ -10,12 +10,12 @@ body {
   font-family: "PT Serif", serif;
   color: white;
   font-size: 6vmin;
-  border: 1px solid orange;
+  border: 0px solid orange;
 }
 
 .container{
   margin: 20px;
-  border: 1px solid blue;
+  border: 0px solid blue;
 }
 
 .hi {
@@ -32,23 +32,32 @@ body {
   position: absolute;
   left: 43vmin;
   top: 22vmin;
-  border: 1px solid yellow;
+  border: 0px solid yellow;
   z-index: 2;
 
 }
 .julia.last {
   position: relative;
-  max-width: 12vmin;
+  max-width: 30vmin;
   top: 0;
   left: 10px;
   top: 50px;
+}
+
+.ogris {
+  opacity: 0;
+  margin-left: 0.3rem;
+  display: inline-block;
+}
+.ogris.last {
+  opacity: 1;
 }
 
 /* For devices larger than 800px */
 @media (min-width: 800px) {
   .julia {
     width: 400px;
-    border: 4px solid blue;
+    border: 0px solid blue;
   }
  .julia.last {
     position: relative;
