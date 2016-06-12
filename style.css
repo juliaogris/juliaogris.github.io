@@ -22,12 +22,17 @@ body {
   padding: 0;
 }
 .container.last{
-    height: 210vmin;
+  height: 250vmin;
 }
 /* Larger than portrait phone */
 @media (min-width: 500px) {
   .container.last{
-    height: 160vmin;
+    height: 200vmin;
+  }
+}
+@media (min-width: 500px) and (orientation: landscape) {
+  .container.last{
+    height: 195vmin;
   }
 }
 /* Larger than tablet */
@@ -113,9 +118,15 @@ body {
     width: 100%;
     max-width: 470px;
     left: 0;
+    height: 190vmin;
     margin: 0 auto;
-    height: 155vmin;
     border: 0px solid blue;
+  }
+}
+@media (min-width: 500px) and (orientation: landscape) {
+  .red.last {
+    height: 185vmin;
+    border: 0px solid orange;
   }
 }
 /* Larger than tablet */
@@ -164,6 +175,16 @@ body {
 .close.last {
   opacity: 1.0;
 }
+/* Larger than phone portrait */
+@media (min-width: 500px) {
+  .close {
+  }
+}
+/* Larger than tablet */
+@media (min-width: 800px) {
+  .close {
+  }
+}
 
 .details {
   opacity: 0;
@@ -191,7 +212,12 @@ body {
     left: 0;
   }
   .details.last {
-    top: -142vmin;
+    top: -180vmin;
+  }
+}
+@media (min-width: 500px) and (orientation: landscape) {
+  .details.last {
+    top: -173vmin;
   }
 }
 /* Larger than tablet */
