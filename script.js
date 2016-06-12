@@ -34,12 +34,12 @@ function timingExpand(t) {
 
 // From Tween.js (MIT license)
 // @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
-// function timingFunctionCollapse(t) {
-//   if ((t *= 2) < 1) {
-//     return 0.5 * t * t * t * t * t;
-//   }
-//   return 0.5 * ((t -= 2) * t * t * t * t + 2);
-// }
+function timingCollapse(t) {
+  if ((t *= 2) < 1) {
+    return 0.5 * t * t * t * t * t;
+  }
+  return 0.5 * ((t -= 2) * t * t * t * t + 2);
+}
 
 
 function expand(){
@@ -58,7 +58,7 @@ function expand(){
     { timing: timingExpand, duration: 200, element: fullstop, transform: false },
     { timing: timingExpand, duration: 500, element: details, opacity: false, delay: 150},
     { timing: timingExpand, duration: 700, element: details, transform: false, delay: 250},
-    { timing: timingExpand, duration: 500, element: closeBtn, transform: false, delay:150},
+    { timing: timingExpand, duration: 500, element: closeBtn, transform: false, delay:450},
   ]);
 
   flipGroup.first();
@@ -66,8 +66,28 @@ function expand(){
   flipGroup.last('last');
   flipGroup.invert();
   flipGroup.play();
-  // remove expand listener from red & julia
+}
+
+function collapse() {
+  let flipGroup = FLIP.group([
+    { timing: timingCollapse, delay: 100, duration: 600, element: closeBtn, transform: false},
+    { timing: timingCollapse, delay: 100, duration: 600, element: red },
+    { timing: timingCollapse, delay: 100, duration: 600, element: julia },
+    { timing: timingCollapse, delay: 100, duration: 600, element: ogris, transform: false },
+    { timing: timingCollapse, delay: 100, duration: 600, element: details },
+    { timing: timingCollapse, delay: 400, duration: 700, element: pith,  transform: false },
+    { timing: timingCollapse, delay: 300, duration: 600, element: hi, transform: false },
+    { timing: timingCollapse, delay: 300, duration: 600, element: fullstop, transform: false }
+  ]);
+
+  flipGroup.first();
+  container.classList.remove('last');
+  flipGroup.removeClass('last');
+  flipGroup.last();
+  flipGroup.invert();
+  flipGroup.play();
 }
 
 red.addEventListener('click', expand);
 julia.addEventListener('click', expand);
+closeBtn.addEventListener('click', collapse);

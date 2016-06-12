@@ -58,13 +58,13 @@ body {
 .julia.last {
   position: relative;
   left: 40px;
-  top: 10vmin;
+  top: 12vmin;
 }
 /* Larger than phone portrait */
 @media (min-width: 500px) {
   .julia {
     width: 400px;
-    border: 0px solid blue;
+    border: 1px solid blue;
   }
  .julia.last {
     position: relative;
@@ -165,12 +165,12 @@ body {
   opacity: 0.0;
   position: relative;
   margin: 0 auto;
-  top: -239vmin;
-  left: 300px;
+  height: 5vmin;
+  top: -202vmin;
   z-index: 3;
   border: 0px solid green;
-  font-size: 4vmin;
-  width: 4vmin;
+  font-size: 5vmin;
+  width: calc(100vw - 60px);
 }
 .close.last {
   opacity: 1.0;
@@ -178,11 +178,23 @@ body {
 /* Larger than phone portrait */
 @media (min-width: 500px) {
   .close {
+    left: 190px;
+    top: -190vmin;
+    width: 4vmin;
+  }
+}
+@media (min-width: 500px) and (orientation: landscape) {
+  .close {
+    left: 220px;
+    top: -188vmin;
   }
 }
 /* Larger than tablet */
 @media (min-width: 800px) {
   .close {
+    font-size: 3.5vmin;
+    left: 308px;
+    top: -131vmin;
   }
 }
 
@@ -199,7 +211,7 @@ body {
 }
 .details.last {
   opacity: 1;
-  top: -187vmin;
+  top: -192vmin;
 }
 /* Larger than phone portrait */
 @media (min-width: 500px) {
@@ -212,12 +224,12 @@ body {
     left: 0;
   }
   .details.last {
-    top: -180vmin;
+    top: -181vmin;
   }
 }
 @media (min-width: 500px) and (orientation: landscape) {
   .details.last {
-    top: -173vmin;
+    top: -178vmin;
   }
 }
 /* Larger than tablet */
@@ -229,7 +241,7 @@ body {
     max-width: 580px;
   }
   .details.last {
-    top: -117vmin;
+    top: -122vmin;
   }
 }
 
