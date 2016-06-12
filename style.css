@@ -22,7 +22,7 @@ body {
   padding: 0;
 }
 .container.last{
-  height: 250vmin;
+  height: 207vmin;
 }
 /* Larger than portrait phone */
 @media (min-width: 500px) {
