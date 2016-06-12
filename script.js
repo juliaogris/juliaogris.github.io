@@ -1,20 +1,7 @@
 /* global FLIP */
 'use strict';
-// todo: google analytics, smooth scroll to top, font awesome svg, button pressed effect / ripple effect?.
-// slide-share, photos, different margin for desktop, different link style for desktop.
-// pointer, close button
+// todo: google analytics, smooth scroll to top, font awesome svg,  pointer, button pressed effect / ripple effect?,
 
-// var WebFontConfig = {
-//   google: { families: [ 'PT+Serif::latin' ] }
-// };
-// (function() {
-//   var wf = document.createElement('script');
-//   wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-//   wf.type = 'text/javascript';
-//   wf.async = 'true';
-//   var s = document.getElementsByTagName('script')[0];
-//   s.parentNode.insertBefore(wf, s);
-// })();
 
 var red = document.querySelector('.red');
 var julia = document.querySelector('.julia');
@@ -71,17 +58,17 @@ function expand(){
 function collapse() {
   let flipGroup = FLIP.group([
     { timing: timingCollapse, delay: 100, duration: 600, element: closeBtn, transform: false},
-    { timing: timingCollapse, delay: 100, duration: 600, element: red },
-    { timing: timingCollapse, delay: 100, duration: 600, element: julia },
-    { timing: timingCollapse, delay: 100, duration: 600, element: ogris, transform: false },
+    { timing: timingCollapse, delay: 0, duration: 600, element: red },
+    { timing: timingCollapse, delay: 0, duration: 600, element: julia },
+    { timing: timingCollapse, delay: 100, duration: 500, element: ogris, transform: false },
     { timing: timingCollapse, delay: 100, duration: 600, element: details },
-    { timing: timingCollapse, delay: 400, duration: 700, element: pith,  transform: false },
+    { timing: timingCollapse, delay: 500, duration: 700, element: pith,  transform: false },
     { timing: timingCollapse, delay: 300, duration: 600, element: hi, transform: false },
     { timing: timingCollapse, delay: 300, duration: 600, element: fullstop, transform: false }
   ]);
 
   flipGroup.first();
-  container.classList.remove('last');
+  red.classList.remove('rounded');
   flipGroup.removeClass('last');
   flipGroup.last();
   flipGroup.invert();
@@ -91,3 +78,13 @@ function collapse() {
 red.addEventListener('click', expand);
 julia.addEventListener('click', expand);
 closeBtn.addEventListener('click', collapse);
+
+function onFlipComplete(){
+	if (red.classList.contains("last")) {
+		return;
+	}
+  red.classList.add("rounded");
+  container.classList.remove('last');
+}
+
+red.addEventListener('flipComplete', onFlipComplete);
