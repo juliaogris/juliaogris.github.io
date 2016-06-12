@@ -1,6 +1,6 @@
 /* global FLIP */
 'use strict';
-// todo: google analytics, smooth scroll to top, font awesome svg,  pointer, button pressed effect / ripple effect?,
+// todo: font awesome svg,  pointer
 
 
 var red = document.querySelector('.red');
@@ -61,8 +61,8 @@ function collapse() {
     { timing: timingCollapse, delay: 0, duration: 600, element: red },
     { timing: timingCollapse, delay: 0, duration: 600, element: julia },
     { timing: timingCollapse, delay: 100, duration: 500, element: ogris, transform: false },
-    { timing: timingCollapse, delay: 100, duration: 600, element: details },
-    { timing: timingCollapse, delay: 500, duration: 700, element: pith,  transform: false },
+    { timing: timingCollapse, delay: 0, duration: 300, element: details},
+    { timing: timingCollapse, delay: 450, duration: 700, element: pith,  transform: false },
     { timing: timingCollapse, delay: 300, duration: 600, element: hi, transform: false },
     { timing: timingCollapse, delay: 300, duration: 600, element: fullstop, transform: false }
   ]);
