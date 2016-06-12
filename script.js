@@ -1,6 +1,6 @@
 /* global FLIP */
 'use strict';
-// todo: google analytics, smooth scroll to top, font awesome svg, button pressed effect.
+// todo: google analytics, smooth scroll to top, font awesome svg, button pressed effect / ripple effect?.
 // slide-share, photos, different margin for desktop, different link style for desktop.
 // pointer, close button
 
@@ -43,8 +43,6 @@ function timingExpand(t) {
 
 
 function expand(){
-	console.log("RED click.");
-
   // Only expand if the item is collapsed.
   if (red.classList.contains('last'))
     return;
@@ -58,7 +56,8 @@ function expand(){
     { timing: timingExpand, duration: 150, element: pith,  transform: false },
     { timing: timingExpand, duration: 150, element: hi, transform: false },
     { timing: timingExpand, duration: 200, element: fullstop, transform: false },
-    { timing: timingExpand, duration: 400, element: details, delay: 250},
+    { timing: timingExpand, duration: 500, element: details, opacity: false, delay: 150},
+    { timing: timingExpand, duration: 700, element: details, transform: false, delay: 250},
     { timing: timingExpand, duration: 500, element: closeBtn, transform: false, delay:150},
   ]);
 

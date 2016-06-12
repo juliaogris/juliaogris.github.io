@@ -20,8 +20,12 @@ body {
   overflow: hidden;
 }
 
-.container.last{
-  height: 140vmin;
+/* For devices larger than 800px */
+@media (min-width: 800px) {
+  .container.last{
+    height: 140vmin;
+    padding: 0;
+  }
 }
 
 .hi {
@@ -40,19 +44,9 @@ body {
 .julia.last {
   position: relative;
   max-width: 30vmin;
-  left: 40px;
-  top: -100px;
+  left: 30px;
+  top: 20px;
 }
-
-.ogris {
-  opacity: 0;
-  margin-left: 0.3rem;
-  display: inline-block;
-}
-.ogris.last {
-  opacity: 1;
-}
-
 /* For devices larger than 800px */
 @media (min-width: 800px) {
   .julia {
@@ -65,11 +59,19 @@ body {
     max-width: 400px;
     top: 12vmin;
     left: -90px;
+  }
 }
 
+.ogris {
+  opacity: 0;
+  margin-left: 0.3rem;
+  display: inline-block;
 }
-.red
- {
+.ogris.last {
+  opacity: 1;
+}
+
+.red {
   position: absolute;
   width: 15vmin;
   height: 8vmin;
@@ -82,14 +84,24 @@ body {
   z-index: 1;
 }
 .red.last {
-  position: relative;
-  width: 100%;
-  max-width: 670px;
-  left: 0;
-  top: -25px;
-  margin: 0 auto;
-  height: 130vmin;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: calc(100vw - 30px);
   opacity: 0.8;
+  height: 130vmin;
+}
+/* For devices larger than 800px */
+@media (min-width: 800px) {
+  .red.last {
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+    left: 0;
+    top: -25px;
+    margin: 0 auto;
+    height: 130vmin;
+  }
 }
 
 .fullstop {
@@ -130,6 +142,7 @@ body {
 .details.last {
   opacity: 1;
   top: -117vmin;
+  display: none;
 }
 
 a {
