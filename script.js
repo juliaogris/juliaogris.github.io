@@ -37,14 +37,15 @@ function expand(){
   // FLIP = first, last, invert, play - for best frame rate. details under
   // https://aerotwist.com/blog/flip-your-animations/
   var flipGroup = FLIP.group([
-    { timing: timingExpand, duration: 500, element: red },
+    { timing: timingExpand, delay: 100, duration: 500, element: red },
     { timing: timingExpand, delay: 100, duration: 500, element: julia },
     { timing: timingExpand, delay: 100, duration: 500, element: ogris, transform: false },
-    { timing: timingExpand, delay: 100, duration: 150, element: pith,  transform: false },
-    { timing: timingExpand, delay: 100, duration: 150, element: hi, transform: false },
-    { timing: timingExpand, delay: 100, duration: 200, element: fullstop, transform: false },
-    { timing: timingExpand, delay: 400, duration: 500, element: details},
-    { timing: timingExpand, delay: 300, duration: 500, element: closeBtn, transform: false},
+    { timing: timingExpand, delay: 0, duration: 150, element: pith,  transform: false },
+    { timing: timingExpand, delay: 0, duration: 150, element: hi, transform: false },
+    { timing: timingExpand, delay: 0, duration: 150, element: fullstop, transform: false },
+    { timing: timingExpand, delay: 600, duration: 600, element: details},//, opacity: false},
+   // { timing: timingExpand, delay: 500, duration: 400, element: details, transform: false},
+    { timing: timingExpand, delay: 600, duration: 600, element: closeBtn, transform: false},
   ]);
 
   flipGroup.first();
@@ -56,14 +57,20 @@ function expand(){
 
 function collapse() {
   var flipGroup = FLIP.group([
-    { timing: timingCollapse, delay: 100, duration: 600, element: closeBtn, transform: false},
-    { timing: timingCollapse, delay: 0, duration: 600, element: red },
-    { timing: timingCollapse, delay: 0, duration: 600, element: julia },
-    { timing: timingCollapse, delay: 100, duration: 500, element: ogris, transform: false },
-    { timing: timingCollapse, delay: 0, duration: 300, element: details},
-    { timing: timingCollapse, delay: 450, duration: 700, element: pith,  transform: false },
-    { timing: timingCollapse, delay: 300, duration: 600, element: hi, transform: false },
-    { timing: timingCollapse, delay: 300, duration: 600, element: fullstop, transform: false }
+    { timing: timingCollapse, delay: 0, duration: 100, element: closeBtn, transform: false},
+    { timing: timingCollapse, delay: 100, duration: 500, element: red },
+    { timing: timingCollapse, delay: 100, duration: 500, element: julia },
+    { timing: timingCollapse, delay: 0, duration: 400, element: ogris, transform: false },
+    { timing: timingCollapse, delay: 0, duration: 100, element: details},
+    { timing: timingCollapse, delay: 600, duration: 400, element: pith,  transform: false },
+    { timing: timingCollapse, delay: 500, duration: 200, element: hi, transform: false },
+    { timing: timingCollapse, delay: 500, duration: 200, element: fullstop, transform: false }
+    // { timing: timingCollapse, delay: 100, duration: 600, element: julia },
+    // { timing: timingCollapse, delay: 500, duration: 200, element: ogris, transform: false },
+    // { timing: timingCollapse, delay: 0, duration: 300, element: details},
+    // { timing: timingCollapse, delay: 650, duration: 700, element: pith,  transform: false },
+    // { timing: timingCollapse, delay: 500, duration: 600, element: hi, transform: false },
+    // { timing: timingCollapse, delay: 500, duration: 600, element: fullstop, transform: false }
   ]);
 
   flipGroup.first();
