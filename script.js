@@ -56,7 +56,7 @@ function expand(){
 }
 
 function collapse() {
-  let flipGroup = FLIP.group([
+  var flipGroup = FLIP.group([
     { timing: timingCollapse, delay: 100, duration: 600, element: closeBtn, transform: false},
     { timing: timingCollapse, delay: 0, duration: 600, element: red },
     { timing: timingCollapse, delay: 0, duration: 600, element: julia },
