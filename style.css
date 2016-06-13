@@ -85,11 +85,11 @@ body {
 /* Larger than tablet */
 @media (min-width: 800px) {
   .julia {
-    width: 200px;
+    width: 400px;
     border: 0px solid blue;
   }
  .julia.last {
-    left: -190px;
+    left: -90px;
     top: 12vmin;
   }
 }
