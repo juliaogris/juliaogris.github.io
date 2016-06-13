@@ -43,7 +43,7 @@ function expand(){
     { timing: timingExpand, delay: 100, duration: 150, element: pith,  transform: false },
     { timing: timingExpand, delay: 100, duration: 150, element: hi, transform: false },
     { timing: timingExpand, delay: 100, duration: 200, element: fullstop, transform: false },
-    { timing: timingExpand, delay: 400, duration: 600, element: details},
+    { timing: timingExpand, delay: 400, duration: 500, element: details},
     { timing: timingExpand, delay: 300, duration: 500, element: closeBtn, transform: false},
   ]);
 
