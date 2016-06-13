@@ -1,6 +1,6 @@
 /* global FLIP */
 'use strict';
-// todo: font awesome svg,  pointer
+// todo: font awesome svg,  pointer, minify stuff.
 
 
 var red = document.querySelector('.red');
