@@ -38,14 +38,14 @@ function expand(){
   // https://aerotwist.com/blog/flip-your-animations/
   var flipGroup = FLIP.group([
     { timing: timingExpand, duration: 500, element: red },
-    { timing: timingExpand, duration: 500, element: julia },
-    { timing: timingExpand, duration: 500, element: ogris, transform: false },
-    { timing: timingExpand, duration: 150, element: pith,  transform: false },
-    { timing: timingExpand, duration: 150, element: hi, transform: false },
-    { timing: timingExpand, duration: 200, element: fullstop, transform: false },
-    { timing: timingExpand, duration: 500, element: details, opacity: false, delay: 150},
-    { timing: timingExpand, duration: 700, element: details, transform: false, delay: 250},
-    { timing: timingExpand, duration: 500, element: closeBtn, transform: false, delay:450},
+    { timing: timingExpand, delay: 100, duration: 500, element: julia },
+    { timing: timingExpand, delay: 100, duration: 500, element: ogris, transform: false },
+    { timing: timingExpand, delay: 100, duration: 150, element: pith,  transform: false },
+    { timing: timingExpand, delay: 100, duration: 150, element: hi, transform: false },
+    { timing: timingExpand, delay: 100, duration: 200, element: fullstop, transform: false },
+    { timing: timingExpand, delay: 150, duration: 500, element: details, opacity: false},
+    { timing: timingExpand, delay: 450, duration: 500, element: details, transform: false},
+    { timing: timingExpand, delay: 450, duration: 500, element: closeBtn, transform: false},
   ]);
 
   flipGroup.first();
