@@ -70,12 +70,12 @@ body {
 /* Larger than phone portrait */
 @media (min-width: 600px) {
  .julia {
-    width: 200px;
+    width: 250px;
  }
  .julia.last {
     position: relative;
     margin: 0 auto;
-    left: -113px;
+    left: -85px;
   }
 }
 /* Larger than tablet */
@@ -98,6 +98,11 @@ body {
   opacity: 1;
 }
 
+.rounded {
+  border-radius: 1.5vmin;
+  box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 1);
+}
+
 .red {
   position: absolute;
   width: 15vmin;
@@ -109,12 +114,6 @@ body {
   z-index: 1;
   box-sizing: content-box;
 }
-
-.rounded {
-  border-radius: 1.5vmin;
-  box-shadow: .2vmin .7vmin .1vmin 0 rgba(50, 0, 6, 1);
-}
-
 .red.last {
   position: relative;
   top: -19px;
@@ -172,13 +171,12 @@ body {
 
 .close {
   opacity: 0.0;
-  position: relative;
-  margin: 0 auto;
-  height: 5vmin;
-  top: -202vmin;
+  position: absolute;
+  top: 24px;
+  left: calc(100% - 48px);
+  width: 4vmin;
   z-index: 3;
   font-size: 5vmin;
-  width: calc(100% - 60px);
 }
 .close.last {
   opacity: 1.0;
@@ -186,23 +184,29 @@ body {
 /* Larger than phone portrait */
 @media (min-width: 500px) {
   .close {
-    left: 190px;
-    top: -190vmin;
-    width: 4vmin;
+    top: 40px;
+    left: calc(((100% - 430px) / 2) + 410px);
   }
 }
 @media (min-width: 500px) and (orientation: landscape) {
   .close {
-    left: 220px;
-    top: -188vmin;
+    left: calc(((100% - 430px) / 2) + 425px);
+    top: 20px;
   }
 }
 /* Larger than tablet */
 @media (min-width: 800px) {
   .close {
     font-size: 3.5vmin;
-    left: 308px;
-    top: -131vmin;
+    left: calc(((100% - 670px) / 2) + 625px);
+    top: 50px;
+  }
+}
+/* Larger than tablet */
+@media (min-width: 1100px) {
+  .close {
+    left: calc(((100% - 670px) / 2) + 670px - 6vmin);
+    top: 7vmin;
   }
 }
 
@@ -210,7 +214,7 @@ body {
   opacity: 0;
   position: relative;
   bottom: -120vh;
-  width: calc(100vw - 80px);
+  width: calc(100% - 80px);
   overflow: hidden;
   font-size: 4vmin;
   z-index: 5;
@@ -218,7 +222,7 @@ body {
 }
 .details.last {
   opacity: 1;
-  top: -192vmin;
+  top: -187vmin;
 }
 /* Larger than phone portrait */
 @media (min-width: 500px) {
@@ -231,12 +235,12 @@ body {
     left: 0;
   }
   .details.last {
-    top: -181vmin;
+    top: -176vmin;
   }
 }
 @media (min-width: 500px) and (orientation: landscape) {
   .details.last {
-    top: -178vmin;
+    top: -173vmin;
   }
 }
 /* Larger than tablet */
@@ -248,7 +252,7 @@ body {
     max-width: 580px;
   }
   .details.last {
-    top: -122vmin;
+    top: -117vmin;
   }
 }
 
