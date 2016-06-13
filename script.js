@@ -43,9 +43,8 @@ function expand(){
     { timing: timingExpand, delay: 100, duration: 150, element: pith,  transform: false },
     { timing: timingExpand, delay: 100, duration: 150, element: hi, transform: false },
     { timing: timingExpand, delay: 100, duration: 200, element: fullstop, transform: false },
-    { timing: timingExpand, delay: 150, duration: 500, element: details, opacity: false},
-    { timing: timingExpand, delay: 450, duration: 500, element: details, transform: false},
-    { timing: timingExpand, delay: 450, duration: 500, element: closeBtn, transform: false},
+    { timing: timingExpand, delay: 300, duration: 500, element: details, opacity: false},
+    { timing: timingExpand, delay: 300, duration: 500, element: closeBtn, transform: false},
   ]);
 
   flipGroup.first();
