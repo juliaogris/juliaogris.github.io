@@ -12,14 +12,12 @@ body {
   font-family: "PT Serif", serif;
   color: white;
   font-size: 6vmin;
-  border: 0px solid orange;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  border: 0px solid blue;
   padding: 0;
 }
 .container.last{
@@ -53,10 +51,8 @@ body {
   position: absolute;
   left: 43vmin;
   top: 22vmin;
-  border: 0px solid yellow;
   z-index: 2;
   width: 170px;
-  border: 0px solid blue;
 }
 .julia.last {
   position: relative;
@@ -86,7 +82,6 @@ body {
 @media (min-width: 800px) {
   .julia {
     width: 400px;
-    border: 0px solid blue;
   }
  .julia.last {
     left: -90px;
@@ -124,10 +119,9 @@ body {
   position: relative;
   top: -19px;
   left: 15px;
-  width: calc(100vw - 30px);
+  width: calc(100% - 30px);
   opacity: 0.8;
   height: 200vmin;
-  border: 0px solid yellow;
 
 }
 /* Larger than phone portrait */
@@ -138,13 +132,11 @@ body {
     left: 0;
     height: 190vmin;
     margin: 0 auto;
-    border: 0px solid blue;
   }
 }
 @media (min-width: 500px) and (orientation: landscape) {
   .red.last {
     height: 185vmin;
-    border: 0px solid orange;
   }
 }
 /* Larger than tablet */
@@ -152,7 +144,6 @@ body {
   .red.last {
     max-width: 670px;
     height: 130vmin;
-    border: 0px solid red;
   }
 }
 
@@ -186,9 +177,8 @@ body {
   height: 5vmin;
   top: -202vmin;
   z-index: 3;
-  border: 0px solid green;
   font-size: 5vmin;
-  width: calc(100vw - 60px);
+  width: calc(100% - 60px);
 }
 .close.last {
   opacity: 1.0;
@@ -221,7 +211,6 @@ body {
   position: relative;
   bottom: -120vh;
   width: calc(100vw - 80px);
-  border: 0px solid green;
   overflow: hidden;
   font-size: 4vmin;
   z-index: 5;
