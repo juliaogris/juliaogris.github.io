@@ -1,7 +1,7 @@
 /* global FLIP */
 'use strict';
-// todo: font awesome svg,  pointer, minify stuff.
-
+// todo: font awesome svg,  pointer/hover
+// trocci & open sans
 
 var red = document.querySelector('.red');
 var julia = document.querySelector('.julia');
@@ -12,6 +12,10 @@ var ogris = document.querySelector('.ogris');
 var details = document.querySelector('.details');
 var container = document.querySelector('.container');
 var closeBtn = document.querySelector('.close');
+
+var redLastCSSRule = getCSSRule('.red.last');
+var containerLastCSSRule = getCSSRule('.container.last');
+var detailsLastCSSRule = getCSSRule('.details.last');
 
 // From Tween.js (MIT license)
 // @see https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L480-L484
@@ -49,10 +53,24 @@ function expand(){
   ]);
 
   flipGroup.first();
+  updateContainerHeight();
   container.classList.add('last');
   flipGroup.last('last');
   flipGroup.invert();
   flipGroup.play();
+}
+
+function updateContainerHeight() {
+  if (document.body.clientWidth > 800) {
+    redLastCSSRule.style.height = "calc(" + details.clientHeight + "px + 24vmin)";
+    containerLastCSSRule.style.height = "calc(" + details.clientHeight + "px + 35vmin)";
+    detailsLastCSSRule.style.top = "calc(-" + details.clientHeight + "px - 8vmin)";
+  }
+  else {
+    redLastCSSRule.style.height = "calc(" + details.clientHeight + "px + 24vmin)";
+    containerLastCSSRule.style.height = "calc(" + details.clientHeight + "px + 30vmin)";
+    detailsLastCSSRule.style.top = "calc(-" + details.clientHeight + "px - 8vmin)";
+  }
 }
 
 function collapse() {
@@ -65,12 +83,6 @@ function collapse() {
     { timing: timingCollapse, delay: 600, duration: 400, element: pith,  transform: false },
     { timing: timingCollapse, delay: 500, duration: 200, element: hi, transform: false },
     { timing: timingCollapse, delay: 500, duration: 200, element: fullstop, transform: false }
-    // { timing: timingCollapse, delay: 100, duration: 600, element: julia },
-    // { timing: timingCollapse, delay: 500, duration: 200, element: ogris, transform: false },
-    // { timing: timingCollapse, delay: 0, duration: 300, element: details},
-    // { timing: timingCollapse, delay: 650, duration: 700, element: pith,  transform: false },
-    // { timing: timingCollapse, delay: 500, duration: 600, element: hi, transform: false },
-    // { timing: timingCollapse, delay: 500, duration: 600, element: fullstop, transform: false }
   ]);
 
   flipGroup.first();
@@ -94,3 +106,26 @@ function onFlipComplete(){
 }
 
 red.addEventListener('flipComplete', onFlipComplete);
+
+window.addEventListener('resize', function(){
+  if (!red.classList.contains('last')) {
+    return;
+  }
+  updateContainerHeight();
+});
+
+
+function getCSSRule(ruleName) {
+    ruleName = ruleName.toLowerCase();
+    var i, j, cssRule;
+
+    for (i = 0; i < document.styleSheets.length; i++) {
+      for (j=0; j < document.styleSheets[i].cssRules.length; j++) {
+        cssRule = document.styleSheets[i].cssRules[j];
+        if (cssRule instanceof CSSStyleRule &&
+            cssRule.selectorText.toLowerCase() == ruleName) {
+          return cssRule;
+        }
+      }
+    }
+}

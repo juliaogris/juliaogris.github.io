@@ -21,37 +21,12 @@ body {
   padding: 0;
 }
 .container.last{
-  height: 207vmin;
 }
-/* Larger than portrait phone */
-@media (min-width: 500px) {
-  .container.last{
-    height: 200vmin;
-  }
-}
-@media (min-width: 500px) and (orientation: landscape) {
-  .container.last{
-    height: 195vmin;
-  }
-}
-/* Larger than tablet */
-@media (min-width: 800px) {
-  .container.last{
-    height: 140vmin;
-  }
-}
-@media (min-width: 1024px) {
-  .container.last{
-    height: 200vmin;
-  }
-}
-
 .hi {
   position: absolute;
   left: 22vmin;
   top: 22vmin;
 }
-
 .julia {
   position: absolute;
   left: 43vmin;
@@ -80,7 +55,7 @@ body {
  .julia.last {
     position: relative;
     margin: 0 auto;
-    left: -85px;
+    left: -90px;
   }
 }
 /* Larger than tablet */
@@ -126,7 +101,6 @@ body {
   width: calc(100% - 30px);
   opacity: 0.8;
   height: 200vmin;
-
 }
 /* Larger than phone portrait */
 @media (min-width: 500px) {
@@ -134,26 +108,16 @@ body {
     width: 100%;
     max-width: 470px;
     left: 0;
-    height: 190vmin;
     margin: 0 auto;
   }
 }
-@media (min-width: 500px) and (orientation: landscape) {
-  .red.last {
-    height: 185vmin;
-  }
-}
-/* Larger than tablet */
 @media (min-width: 800px) {
   .red.last {
     max-width: 670px;
-    height: 130vmin;
-  }
-}
-@media (min-width: 1024px) {
-  .red.last {
-    height: 190vmin;
-  }
+/*    max-width: 670px;
+*/    /*TODO: 75% ??*/
+/*    height: 130vmin;
+*/  }
 }
 
 .fullstop {
@@ -220,7 +184,7 @@ body {
 }
 
 .details {
-  opacity: 0;
+  opacity: 1;
   position: relative;
   bottom: -120vh;
   width: calc(100% - 80px);
@@ -243,14 +207,6 @@ body {
     width: 100%;
     left: 0;
   }
-  .details.last {
-    top: -176vmin;
-  }
-}
-@media (min-width: 500px) and (orientation: landscape) {
-  .details.last {
-    top: -173vmin;
-  }
 }
 /* Larger than tablet */
 @media (min-width: 800px) {
@@ -259,14 +215,6 @@ body {
     position: relative;
     bottom: -120vh;
     max-width: 580px;
-  }
-  .details.last {
-    top: -117vmin;
-  }
-}
-@media (min-width: 1024px) {
-  .details.last {
-     top: -177vmin;
   }
 }
 a {
